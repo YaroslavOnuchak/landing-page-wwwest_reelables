@@ -99,7 +99,7 @@ header .nav__list li:last-child {
   background-repeat: no-repeat;
 }
 .header .arrow {
-  background: url(../img/arrow-circ--blue.svg) center/contain;
+  background: url(../img/arrow-circ--blue.png) center/contain;
 }
 .btn {
   position: relative;
@@ -508,7 +508,7 @@ footer .wrap {
   border-color: white;
 }
 .footer .arrow {
-  background: url(../img/arrow-circ.svg) center/contain;
+  background: url(../img/arrow-circ.png) center/contain;
 }
 .line {
   height: 1px;
