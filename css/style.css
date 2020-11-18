@@ -130,9 +130,10 @@ header .nav__list li:last-child {
   height: 33px;
 }
 .header__content {
+  /* flex: 1 1 auto; */
   display: flex;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   z-index: 22;
 
   /* flex: 1 1 auto; */
@@ -180,16 +181,26 @@ header .nav__list li:last-child {
 }
 .header__img {
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 100%;
   left: 0%;
   bottom: 0;
   height: 100%;
 }
 .header__img img {
-  bottom: -40%;
-  left: 35%;
-  position: absolute;
+  position: relative;
+  margin-right: 10%;
+  bottom: 5%;
+  /* left: 35%; */
+  /* position: absolute; */
   object-fit: cover;
+  transform: translateX(40%);
+  -webkit-transform: translateX(40%);
+  -moz-transform: translateX(40%);
+  -ms-transform: translateX(40%);
+  -o-transform: translateX(40%);
 }
 
 .header-footer {
