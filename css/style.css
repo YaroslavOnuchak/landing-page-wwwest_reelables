@@ -193,14 +193,15 @@ header .nav__list li:last-child {
   position: relative;
   margin-right: 10%;
   bottom: 5%;
-  /* left: 35%; */
-  /* position: absolute; */
+  /*left: 35%;
+  */ /*position: absolute;
+  */
   object-fit: cover;
-  transform: translateX(40%);
-  -webkit-transform: translateX(40%);
-  -moz-transform: translateX(40%);
-  -ms-transform: translateX(40%);
-  -o-transform: translateX(40%);
+  transform: translate(40%, 5%);
+  -webkit-transform: translate(40%, 5%);
+  -moz-transform: translate(40%, 5%);
+  -ms-transform: translate(40%, 5%);
+  -o-transform: translate(40%, 5%);
 }
 
 .header-footer {
