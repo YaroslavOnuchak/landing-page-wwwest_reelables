@@ -116,14 +116,20 @@ header .nav__list li:last-child {
 }
 .btn span {
   position: relative;
-  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
+  display: inline-block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
-.btn:hover span {
-  right: -10%;
+.btn:hover > span {
+  color: red;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
 }
 .nav__list .btn {
   width: 100px;
