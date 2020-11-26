@@ -422,7 +422,7 @@ body {
 header {
   position: relative;
   /* height: 100vh; */
-  background: url(../img/heder_bg.png) no-repeat center/cover;
+  background: url(../img/heder_bg.webp) no-repeat center/cover;
   padding: 0 !important;
   overflow: hidden;
 }
@@ -996,8 +996,6 @@ footer .container {
   line-height: 22px;
   color: #757378;
 }
-
-.webp1 header { background: url(../img/heder_bg.webp) no-repeat center/cover; }
 
 .webp1 .header .arrow { background: url(../img/arrow-circ--blue.webp) center/contain; }
 
