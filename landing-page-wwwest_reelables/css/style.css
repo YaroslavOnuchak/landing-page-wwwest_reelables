@@ -381,8 +381,7 @@ template {
 @font-face {
   font-family: "Play";
   font-display: swap;
-  src: url("../fonts/Play-Bold.woff") format("woff"),
-    url("../fonts/file_name.woff2") format("woff2");
+  src: url("../fonts/Play-Bold.woff") format("woff"), url("../fonts/file_name.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -390,8 +389,7 @@ template {
 @font-face {
   font-family: "UniSans";
   font-display: swap;
-  src: url("../fonts/UniSansHeavyCaps.woff") format("woff"),
-    url("../fonts/file_name.woff2") format("woff2");
+  src: url("../fonts/UniSansHeavyCaps.woff") format("woff"), url("../fonts/file_name.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -489,8 +487,7 @@ nav {
 
 .nav__list li:hover {
   text-decoration: underline;
-  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #55cae8,
-    0 0 70px #55cae8, 0 0 80px #55cae8, 0 0 100px #55cae8, 0 0 150px #55cae8;
+  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #55cae8, 0 0 70px #55cae8, 0 0 80px #55cae8, 0 0 100px #55cae8, 0 0 150px #55cae8;
   -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(255, 255, 255, 0.48)));
 }
 
@@ -667,7 +664,6 @@ main h2 {
 }
 
 .dark-section {
-  background: url(../img/main_drkBg.png) no-repeat center/cover;
   background: url(../img/main_drkBg.webp) no-repeat center/cover;
   color: white;
 }
@@ -699,17 +695,8 @@ main h2 {
   min-height: 222px;
   border: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(
-    180deg,
-    rgba(85, 202, 232, 0.5) 0%,
-    rgba(201, 232, 240, 0.08) 41.4%,
-    rgba(85, 202, 232, 0) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(196, 196, 196, 0) 0%,
-    rgba(23, 128, 155, 0.1) 73.44%
-  );
+  border-image-source: linear-gradient(180deg, rgba(85, 202, 232, 0.5) 0%, rgba(201, 232, 240, 0.08) 41.4%, rgba(85, 202, 232, 0) 100%);
+  background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(23, 128, 155, 0.1) 73.44%);
   overflow: hidden;
   transition: 5s;
   -webkit-transition: 5s;
@@ -720,12 +707,7 @@ main h2 {
 
 .workflow-templates__info:hover {
   text-decoration: underline;
-  border-image-source: linear-gradient(
-    360deg,
-    rgba(85, 202, 232, 0.5) 0%,
-    rgba(201, 232, 240, 0.08) 41.4%,
-    rgba(85, 202, 232, 0) 100%
-  );
+  border-image-source: linear-gradient(360deg, rgba(85, 202, 232, 0.5) 0%, rgba(201, 232, 240, 0.08) 41.4%, rgba(85, 202, 232, 0) 100%);
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
@@ -764,13 +746,7 @@ main h2 {
 
 .smart-labels__img {
   min-height: 360px;
-  background: linear-gradient(
-    270deg,
-    #ffffff 13.73%,
-    #ffffff 83.26%,
-    rgba(255, 255, 255, 0.3) 88.9%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(270deg, #ffffff 13.73%, #ffffff 83.26%, rgba(255, 255, 255, 0.3) 88.9%, rgba(255, 255, 255, 0) 100%);
 }
 
 .smart-labels__img::after {
@@ -780,11 +756,7 @@ main h2 {
   border-radius: 50%;
   position: absolute;
   left: 40%;
-  background: linear-gradient(
-    270deg,
-    rgba(85, 202, 232, 0.07) 4.6%,
-    rgba(196, 196, 196, 0) 93.97%
-  );
+  background: linear-gradient(270deg, rgba(85, 202, 232, 0.07) 4.6%, rgba(196, 196, 196, 0) 93.97%);
 }
 
 .smart-labels__img:nth-child(4n + 3)::after {
@@ -861,11 +833,7 @@ main .bluetooth {
   border-radius: 50%;
   position: absolute;
   left: -50%;
-  background: linear-gradient(
-    270deg,
-    rgba(85, 202, 232, 0.07) 4.6%,
-    rgba(196, 196, 196, 0) 93.97%
-  );
+  background: linear-gradient(270deg, rgba(85, 202, 232, 0.07) 4.6%, rgba(196, 196, 196, 0) 93.97%);
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
@@ -1029,18 +997,8 @@ footer .container {
   color: #757378;
 }
 
-.webp1 header {
-  background: url(../img/heder_bg.webp) no-repeat center/cover;
-}
+.webp1 header { background: url(../img/heder_bg.webp) no-repeat center/cover; }
 
-.webp1 .header .arrow {
-  background: url(../img/arrow-circ--blue.webp) center/contain;
-}
+.webp1 .header .arrow { background: url(../img/arrow-circ--blue.webp) center/contain; }
 
-.webp1 .dark-section {
-  background: url(../img/main_drkBg.webp) no-repeat center/cover;
-}
-
-.webp1 .footer .arrow {
-  background: url(../img/arrow-circ.webp) center/contain;
-}
+.webp1 .footer .arrow { background: url(../img/arrow-circ.webp) center/contain; }
