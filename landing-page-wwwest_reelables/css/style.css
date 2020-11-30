@@ -982,8 +982,6 @@ input[type="email"] {
   width: 100%;
   min-height: 215px;
   background: #514e55;
-  /* padding: 10px 0 0; */
-  color: #fff;
   padding-bottom: 48px;
 }
 
@@ -991,7 +989,7 @@ footer .wrap {
   padding-top: 55px;
 }
 
-.footer li {
+.footer .nav_link {
   color: #fff;
 }
 
