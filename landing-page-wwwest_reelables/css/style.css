@@ -415,13 +415,18 @@ body {
   position: relative;
 }
 
+a,
+a :hover {
+  text-decoration: none;
+  color: #5d676f;
+}
+
 .underline {
   text-decoration: underline;
 }
 
 header {
   position: relative;
-  /* height: 100vh; */
   background: url(../img/heder_bg.webp) no-repeat center/cover;
   padding: 0 !important;
   overflow: hidden;
@@ -436,10 +441,9 @@ header .wrap {
   height: 100vh;
 }
 
-.nav-logo-wrap {
+.nav_logo-wrap {
   display: flex;
   position: relative;
-  /* padding: 0; */
   justify-content: space-between;
   align-items: center;
 }
@@ -460,7 +464,6 @@ header .wrap {
 nav {
   position: relative;
   z-index: 222;
-  /* height: 23px; */
 }
 
 .nav__list {
@@ -474,24 +477,21 @@ nav {
 .nav__list li {
   position: relative;
   margin-right: 20px;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 22px;
   letter-spacing: 0.01em;
   transition: 0.5s;
+  color: #5d676f;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
 }
 
 .nav__list li:hover {
   text-decoration: underline;
-  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #55cae8, 0 0 70px #55cae8, 0 0 80px #55cae8, 0 0 100px #55cae8, 0 0 150px #55cae8;
+  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 70px #55cae8, 0 0 80px #55cae8;
   -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(255, 255, 255, 0.48)));
 }
 
-header li {
+.nav__list li:hover a {
   color: #5d676f;
 }
 
@@ -503,6 +503,22 @@ header li {
 
 header .nav__list li:last-child {
   border-color: #55cae8;
+}
+
+#menuToggle a {
+  transition: color 0.3s ease;
+}
+
+#menuToggle input {
+  display: none;
+}
+
+/*
+* Just a quick hamburger
+*/
+
+#menuToggle .burger-line {
+  display: none;
 }
 
 .arrow {
@@ -536,6 +552,8 @@ header .nav__list li:last-child {
 .btn span {
   position: relative;
   display: inline-block;
+  margin-left: 10%;
+  font-size: 1.5rem;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -579,7 +597,7 @@ header .nav__list li:last-child {
   letter-spacing: 0.01em;
 }
 
-.title span {
+.title mark {
   display: inline-block;
   background-color: #55cae8;
   color: white;
@@ -588,7 +606,7 @@ header .nav__list li:last-child {
 
 .header__text h1 {
   text-align: left;
-  font-size: 46px;
+  font-size: 3rem;
   margin-bottom: 24px;
   line-height: 66px;
 }
@@ -597,8 +615,14 @@ header .nav__list li:last-child {
   font-size: 20px;
 }
 
-.header__text .btn {
+.header__text .header_btn {
   margin-top: 36px;
+}
+
+.header__text .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   width: 198px;
   height: 68px;
@@ -666,6 +690,7 @@ main h2 {
 .dark-section {
   background: url(../img/main_drkBg.webp) no-repeat center/cover;
   color: white;
+  overflow: hidden;
 }
 
 .dark-section .title {
@@ -706,12 +731,9 @@ main h2 {
 }
 
 .workflow-templates__info:hover {
+  cursor: pointer;
   text-decoration: underline;
-  border-image-source: linear-gradient(360deg, rgba(85, 202, 232, 0.5) 0%, rgba(201, 232, 240, 0.08) 41.4%, rgba(85, 202, 232, 0) 100%);
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
+  text-shadow: 0 0 5px #5d676f;
 }
 
 .workflow-templates__info .title {
@@ -925,7 +947,8 @@ input[type="email"] {
   border: 1px solid #504c54;
 }
 
-.form-contact span {
+.form-contact span,
+.form-contact span a {
   color: #4ac9f3;
 }
 
@@ -968,12 +991,11 @@ footer .wrap {
   padding-top: 55px;
 }
 
-.footer .nav__list {
+.footer li {
   color: #fff;
-  border-color: white;
 }
 
-.footer .nav__list:last-child {
+.footer .nav__list li:last-child {
   border-color: white;
 }
 

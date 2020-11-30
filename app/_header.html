@@ -1,29 +1,35 @@
 <header class="header container-fluid">
     <div class="wrap ">
-        <div class="nav-logo-wrap container">
+        <div class="nav_logo-wrap container">
             <div class="logo img"><img class="logo_img" src="img/header_log0.png" alt=""></div>
             <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li id="nav-features">Features</li>
-                    <li id="nav-templates">Templates</li>
-                    <li id="nav-demo">Demo</li>
-                    <li id="nav-pricing">Pricing</li>
-                    <li id="nav-integrations">Integrations</li>
-                    <li id="nav-contact">Contact us </li>
-                    <li id="nav-try">Try It <span class="arrow"></span></li>
-                </ul>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <ul id="menu" class="nav__list">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Demo</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Try It <span class="arrow"></span></a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
         <div class="header__content container">
             <div class="header__text">
-                <h1 class="title"><span>Smart business processes </span><br>for automating supply chains and
+                <h1 class="title"><mark>Smart business processes </mark><br>for automating supply chains and
                     inventory management
                 </h1>
                 <p>Create custom, asset tracking workflows with Bluetooth-enabled smart labels that optimize how
                     your company handles inventory, deliveries, and equipment.</p>
-                <div class="header_btn"><button type="button" class="btn btn__contact">contact us
-                        <span>>></span></button>
-                    <button type="button" class="btn btn__try">try it <span>>></span></button></div>
+                <div class="header_btn"><a href="#" class="btn btn__contact">contact us
+                        <span>>></span></a>
+                    <a type="button" class="btn btn__try">try it <span>>></span></a></div>
 
             </div>
             <div class="header__img-wrap img"><img class="header_main-img" src="img/header_img.png" alt=""></div>
