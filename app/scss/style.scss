@@ -15,7 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
-.img {
+.relative {
   position: relative;
 }
 a,
@@ -31,16 +31,18 @@ header {
   background: url(../img/heder_bg.webp) no-repeat center/cover;
   padding: 0 !important;
   overflow: hidden;
+  // max-height: 100%;
 }
 header .wrap {
   position: relative;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 48px;
-  height: 100vh;
+  min-height: 100vh;
 }
-.nav_logo-wrap {
+.nav__logo-wrap {
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -53,7 +55,7 @@ header .wrap {
   width: 100px;
   height: 100%;
 }
-.logo .logo_img {
+.logo .logo__img {
   width: 100px;
   height: 25px;
 }
@@ -71,7 +73,7 @@ nav {
 .nav__list li {
   position: relative;
   margin-right: 20px;
-  font-size: 1rem;
+  font-size: 15px;
   line-height: 22px;
   letter-spacing: 0.01em;
   transition: 0.5s;
@@ -160,8 +162,8 @@ header .nav__list li:last-child {
   height: 33px;
 }
 .header__content {
-  /* flex: 1 1 auto; */
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   /* position: relative; */
   z-index: 22;
@@ -171,6 +173,8 @@ header .nav__list li:last-child {
 .header__text {
   max-width: 650px;
   margin-left: 15px;
+  position: relative;
+  z-index: 22;
 }
 .title {
   text-align: center;
@@ -193,7 +197,7 @@ header .nav__list li:last-child {
 .header__text p {
   font-size: 20px;
 }
-.header__text .header_btn {
+.header__text .header__btn-wrap {
   margin-top: 36px;
 }
 .header__text .btn {
@@ -224,7 +228,7 @@ header .nav__list li:last-child {
   bottom: 0;
   height: 100%;
 }
-.header__img-wrap .header_main-img {
+.header__img-wrap .header__main-img {
   position: relative;
   min-height: 100vh;
   margin-right: 10%;
@@ -385,6 +389,9 @@ main .bluetooth {
   color: white;
   padding: 53px 0 0;
 }
+.bluetooth > div {
+  display: flex;
+}
 .bluetooth .title {
   font-size: 30px;
   line-height: 48px;
@@ -394,12 +401,13 @@ main .bluetooth {
   font-size: 15px;
   line-height: 22px;
 }
-.bluetooth .container {
-  display: flex;
-}
 .bluetooth_img {
   align-self: flex-end;
   max-width: 745px;
+}
+.bluetooth_img img {
+  object-fit: cover;
+  max-height: 100%;
 }
 .how-works__wrap {
   display: flex;
@@ -526,15 +534,13 @@ input[type="email"] {
   align-self: center;
 }
 .footer {
-  width: 100%;
+  // width: 100%;
   min-height: 215px;
   background: #514e55;
   padding-bottom: 48px;
-}
-footer .wrap {
   padding-top: 55px;
 }
-.footer .nav_link {
+.footer .nav__link {
   color: #fff;
 }
 .footer .nav__list li:last-child {
@@ -548,7 +554,7 @@ footer .wrap {
   background: #757378;
   margin: 19px auto 24px;
 }
-footer .container {
+footer .container-xl {
   padding: 0;
 }
 .footer-botton {

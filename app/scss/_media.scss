@@ -1,13 +1,36 @@
-._container {
-  max-width: $maxWidthContainer + px;
-  margin: 0 auto;
-//   @media (max-width: $md1+px) {
-//     max-width: 970px;
-//   }
-//   @media (max-width: $md2+px) {
-//     max-width: 750px;
-//   }
-//   @media (max-width: $md3+px) {
-//     max-width: none;
-//   }
+@media screen and (max-width: 1200px) {
+  .header__text p {
+    text-shadow: 0 0 5px white;
+  }
+  .header__img-wrap {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
+  .header__img-wrap .header__main-img {
+    transform: translate(40%, 0%);
+    -webkit-transform: translate(40%, 0%);
+    -moz-transform: translate(40%, 0%);
+    -ms-transform: translate(40%, 0%);
+    -o-transform: translate(40%, 0%);
+  }
+  .workflow-templates__wrap {
+    justify-content: space-evenly;
+  }
+  .bluetooth > div {
+    flex-direction: column;
+  }
+  .bluetooth_img {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 970px) {
+  body {
+    color: green;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  // asdf
+  body {
+    color: yellow;
+  }
 }
