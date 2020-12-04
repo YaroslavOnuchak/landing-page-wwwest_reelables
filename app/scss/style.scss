@@ -10,10 +10,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   height: 100%;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+
+  @include adaptiv-font(15, 14);
 }
 .relative {
   position: relative;
@@ -21,7 +26,7 @@ body {
 a,
 a :hover {
   text-decoration: none;
-  color: #5d676f;
+  color: $colorDark;
 }
 .underline {
   text-decoration: underline;
@@ -31,7 +36,6 @@ header {
   background: url(../img/heder_bg.webp) no-repeat center/cover;
   padding: 0 !important;
   overflow: hidden;
-  // max-height: 100%;
 }
 header .wrap {
   position: relative;
@@ -46,7 +50,6 @@ header .wrap {
   display: flex;
   position: relative;
   justify-content: space-between;
-  align-items: center;
 }
 .logo {
   display: flex;
@@ -77,16 +80,22 @@ nav {
   line-height: 22px;
   letter-spacing: 0.01em;
   transition: 0.5s;
-  color: #5d676f;
+  color: $colorDark;
+  text-shadow: 0 0 1px white;
   cursor: pointer;
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
 }
 .nav__list li:hover {
   text-decoration: underline;
   text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 70px #55cae8,
-    0 0 80px #55cae8;
+    0 0 80px $colorBlue;
   -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(255, 255, 255, 0.48)));
   & a {
-    color: #5d676f;
+    color: $colorDark;
   }
 }
 
@@ -96,7 +105,7 @@ nav {
   border-radius: 30px;
 }
 header .nav__list li:last-child {
-  border-color: #55cae8;
+  border-color: $colorBlue;
 }
 
 #menuToggle a {
@@ -105,10 +114,6 @@ header .nav__list li:last-child {
 #menuToggle input {
   display: none;
 }
-
-/*
-* Just a quick hamburger
-*/
 #menuToggle .burger-line {
   display: none;
 }
@@ -120,9 +125,10 @@ header .nav__list li:last-child {
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .header .arrow {
-  background: url(../img/arrow-circ--blue.png) center/contain;
+  background: url(../img/arrow-circ--blue.png) center/contain no-repeat;
 }
 .btn {
   position: relative;
@@ -135,7 +141,7 @@ header .nav__list li:last-child {
   -o-transition: 0.5s;
 }
 .btn:hover {
-  box-shadow: 0 0 25px rgba(74, 201, 243, 1);
+  box-shadow: 0 0 25px $colorBlue;
 }
 .btn span {
   position: relative;
@@ -165,10 +171,7 @@ header .nav__list li:last-child {
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  /* position: relative; */
   z-index: 22;
-
-  /* flex: 1 1 auto; */
 }
 .header__text {
   max-width: 650px;
@@ -184,13 +187,14 @@ header .nav__list li:last-child {
 }
 .title mark {
   display: inline-block;
-  background-color: #55cae8;
-  color: white;
+  background-color: $colorBlue;
+  color: $colorW;
   padding: 0;
 }
+
 .header__text h1 {
   text-align: left;
-  font-size: 3rem;
+  @include adaptiv-font(48, 33);
   margin-bottom: 24px;
   line-height: 66px;
 }
@@ -216,7 +220,7 @@ header .nav__list li:last-child {
 }
 .header__text .btn__try {
   background: #2e2b32;
-  color: #fff;
+  color: $colorW;
 }
 .header__img-wrap {
   position: absolute;
@@ -262,7 +266,7 @@ main h2 {
 }
 .dark-section {
   background: url(../img/main_drkBg.webp) no-repeat center/cover;
-  color: white;
+  color: $colorW;
   overflow: hidden;
 }
 .dark-section .title {
@@ -280,12 +284,12 @@ main h2 {
   justify-content: space-between;
 }
 .workflow-templates__info {
-  font-size: 15px;
+  color: $colorW;
   line-height: 22px;
   letter-spacing: 0.01em;
   padding: 14px 15px 42px;
   margin-bottom: 14px;
-  width: 214px;
+  max-width: 214px;
   min-height: 222px;
   border: 3px solid;
   border-image-slice: 1;
@@ -301,31 +305,37 @@ main h2 {
     rgba(23, 128, 155, 0.1) 73.44%
   );
   overflow: hidden;
-  transition: 5s;
-  -webkit-transition: 5s;
-  -moz-transition: 5s;
-  -ms-transition: 5s;
-  -o-transition: 5s;
-}
-.workflow-templates__info:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  text-shadow: 0 0 5px #5d676f;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .workflow-templates__info .title {
   margin-bottom: 40px;
-  font-size: 16px;
+  @include adaptiv-font(16, 15);
   line-height: 24px;
+}
+.workflow-templates__info:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: $colorW;
+  box-shadow: 0 -2px 5px $colorDark;
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
 }
 .white-section {
   padding: 64px 0 81px 0;
+  overflow: hidden;
 }
 .smart-labels__wrap {
   display: flex;
   flex-wrap: wrap;
   max-width: 950px;
   margin: 37px auto 0;
-  font-size: 15px;
   line-height: 26px;
 }
 .smart-labels__wrap > div {
@@ -393,12 +403,11 @@ main .bluetooth {
   display: flex;
 }
 .bluetooth .title {
-  font-size: 30px;
+  @include adaptiv-font(30, 25);
   line-height: 48px;
 }
 .bluetooth p {
   margin-top: 17px;
-  font-size: 15px;
   line-height: 22px;
 }
 .bluetooth_img {
@@ -435,7 +444,6 @@ main .bluetooth {
 }
 .how-works__text {
   align-self: center;
-  font-size: 15px;
   line-height: 26px;
 }
 .how-works__text p {
@@ -457,7 +465,8 @@ ol {
 }
 ol li {
   display: flex;
-  font-size: 26px;
+
+  @include adaptiv-font(26, 22);
   line-height: 39px;
   counter-increment: my-awesome-counter;
   margin-bottom: 30px;
@@ -470,6 +479,8 @@ ol li::before {
 }
 .general-info__list {
   max-width: 445px;
+  position: relative;
+  z-index: 2;
 }
 .general-info_img {
   top: 0;
@@ -480,12 +491,11 @@ ol li::before {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 .general-info_img img {
   position: relative;
   height: 100%;
-  /* top: 0;
-  bottom: 0;*/
   right: -10%;
 }
 .contact-us {
@@ -498,7 +508,6 @@ ol li::before {
 }
 .form-contact .form-group {
   margin-bottom: 20px;
-  font-size: 15px;
   line-height: 26px;
 }
 input[type="text"],
@@ -534,17 +543,17 @@ input[type="email"] {
   align-self: center;
 }
 .footer {
-  // width: 100%;
+  overflow: hidden;
   min-height: 215px;
   background: #514e55;
   padding-bottom: 48px;
   padding-top: 55px;
 }
 .footer .nav__link {
-  color: #fff;
+  color: $colorW;
 }
 .footer .nav__list li:last-child {
-  border-color: white;
+  border-color: $colorW;
 }
 .footer .arrow {
   background: url(../img/arrow-circ.png) center/contain;
@@ -558,7 +567,6 @@ footer .container-xl {
   padding: 0;
 }
 .footer-botton {
-  font-size: 15px;
   line-height: 22px;
-  color: #757378;
+  color: $colorDark;
 }
